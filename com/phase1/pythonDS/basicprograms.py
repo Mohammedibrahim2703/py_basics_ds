@@ -55,7 +55,19 @@ def isAmstrongNo(num):
             return True
             return False
 
-
+##Find all the Prime numbers
+def prime(x,y):
+    prime_list=[]
+    for i in range(x,y):
+        if i==1 or i==0:
+            continue
+        else:
+            for j in range(2,int(i+2)+1):
+              if i % j == 0:
+                break
+              else:
+                prime_list.append(i)
+              return prime_list
 
 
 if __name__ == '__main__':
@@ -63,6 +75,9 @@ if __name__ == '__main__':
     simpleInterst(4798000,20,float(6.4))
     compoundInterest(500000,10.22,5)
     print(isAmstrongNo(153))
+    prime_no=prime(1,100)
+    print(prime_no)
     print("End")
+
 
 
